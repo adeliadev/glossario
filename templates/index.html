@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Configuração da página -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Inclusão do arquivo de estilo CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    
+    <!-- Título da página -->
+    <title>Glossário</title>
+</head>
+
+<body>
+    <!-- Container principal -->
+    <div class="container">
+        <!-- Título da página -->
+        <h1>Glossário<span>Tech</span></h1>
+
+        <!-- Formulário para adicionar novos termos ao glossário -->
+        <form method="post" action="{{ url_for('adicionar') }}">
+            <label for="termo">Novo Termo:</label>
+            <input type="text" name="termo" required autocomplete="off">
+            <label for="definicao">Nova Definição:</label>
+            <input type="text" name="definicao" required autocomplete="off">
+            <button type="submit">Adicionar</button>
+        </form>
+
+        <!-- Tabela para exibir o glossário -->
+        <table>
+            <thead>
+                <!-- Cabeçalho da tabela -->
+                <tr>
+                    <th class="termos">Termo</th>
+                    <th>Definição</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Loop através dos termos do glossário -->
+                {% for entry in glossario %}
+                <tr>
+                    <!-- Exibe o termo e a definição -->
+                    <td>{{ entry['termo'] }}</td>
+                    <td>{{ entry['definicao'] }}</td>
+                    
+                    <!-- Coluna de ações (Editar e Excluir) -->
+                    <td class="actions">
+                        <div class="action-buttons">
+                            <!-- Formulário para editar um termo -->
+                            <form method="get" action="{{ url_for('editar', indice=loop.index0) }}">
+                                <button class="editar" type="submit">Editar</button>
+                            </form>
+                            
+                            <!-- Formulário para excluir um termo com confirmação -->
+                            <!-- <form method="post" action="{{ url_for('excluir', termo=entry['termo']) }}" onsubmit="return confirm('Tem certeza que deseja excluir este termo?');"> -->
+                                <button class="excluir" type="submit">Excluir</button>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+        <!-- Links adicionais -->
+        <div class="links">
+            <button class="custom-button"><a href="./sobre.html">Sobre a equipe</a></button>
+            <button class="custom-button"><a href="">To-do list</a></button>
+        </div>
+    </div>
+</body>
+
+</html>

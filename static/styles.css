@@ -1,0 +1,124 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70%;
+}
+
+.container {
+  width: 60%;
+  max-width: 800px;
+}
+
+h1 {
+  text-align: center;
+}
+
+span {
+  color: #1565c0;
+}
+
+.custom-button {
+  margin-top: 30px;
+  background-color: #1565c0;
+  border: 1px solid #1565c0;
+}
+
+.custom-button a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.custom-button:hover {
+    background-color: #3498db;
+  text-transform: uppercase;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #1565c0;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  max-width: 200px;
+  word-wrap: break-word;
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #1565c0;
+  color: white;
+}
+
+.actions {
+  text-align: center;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.action-buttons form {
+  margin: 0 5px;
+}
+
+.action-buttons .editar {
+  background-color: #3498db;
+  border: 1px solid #1565c0;
+}
+
+.action-buttons .editar:hover {
+  background-color: #2980b9;
+}
+
+.action-buttons .excluir {
+  background-color: #af4c4c;
+  color: #fff;
+  border: 1px solid #8e3234;
+}
+
+.action-buttons .excluir:hover {
+  background-color: #8e3234;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+}

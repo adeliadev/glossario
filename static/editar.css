@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.actions {
+    text-align: center;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.action-buttons form {
+    margin: 0 5px;
+}
+
+.action-buttons button {
+    background-color: #3498db;
+}
+
+.action-buttons button:hover {
+    background-color: #2980b9;
+}
+
+.custom-button {
+    display: block;
+    margin: 20px auto;
+    background-color: #2ecc71;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.custom-button:hover {
+    background-color: #27ae60;
+}
+
+/* Adicione as cores e estilos desejados para os links */
+.custom-link {
+    display: inline-block;
+    margin-right: 20px;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.link1 {
+    background-color: #1565c0; /* Azul */
+}
+
+.link2 {
+    background-color: #2ecc71; /* Verde */
+}
+
+.custom-link:hover {
+    opacity: 0.8;
+}
